@@ -8,6 +8,6 @@ RUN apk add --no-cache duplicity lftp librsync \
  && pip install pyrax b2 dropbox && rm -r /root/.cache
 COPY b2backend.py /usr/lib/python2.7/site-packages/duplicity/backends/b2backend.py
 RUN  python -m compileall /usr/lib/python2.7/site-packages/duplicity/backends/b2backend.py
-VOLUME /root/.cache/duplicity
+VOLUME /root/.cache/duplicity /tmp
 
 CMD ["duplicity", "--help"]
