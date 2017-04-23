@@ -30,7 +30,7 @@ Because I'm using backblaze nowadays and that duplicity backblaze backend is bug
 
 ```yml
 backup.X:
-  image: speedy37/duplicity:alpine
+  image: speedy37/duplicity
   hostname: backup.X
   environment:
    PASSPHRASE: Passw@rd
